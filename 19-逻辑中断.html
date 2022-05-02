@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sum(x, y) {
+        x = x || 0
+        y = y || 0
+        document.write(x + y)
+      }
+      // option 2
+      // x y 的默认值为0
+      // 调用的时候会有个内部判断是否有参数传递过来
+
+      // function sum(x = 0, y = 0) {
+      //   document.write(x + y)
+      // }
+      sum()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="./33-综合案例-产品展示/images/course01.png" alt="" />
+    <script>
+      let pic = document.querySelector('img')
+
+      setInterval(() => getRandom(1, 8), 2000)
+
+      function getRandom(min, max) {
+        let random = Math.floor(Math.random() * (max - min + 1)) + min
+        pic.src = `./33-综合案例-产品展示/images/course0${random}.png`
+      }
+
+      // let pic = document.querySelector('img')
+      // let random = getRandom(1, 8)
+
+      // pic.src = `./33-综合案例-产品展示/images/course0${random}.png`
+
+      // function getRandom(min, max) {
+      //   return Math.floor(Math.random() * (max - min + 1)) + min
+      // }
+    </script>
+  </body>
+</html>

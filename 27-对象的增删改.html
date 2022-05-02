@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        uname: 'jack',
+        age: 18,
+      }
+      console.log(person.age)
+      //更改属性
+      person.age = 41
+      console.log(person.age)
+
+      //新增属性
+      //js可以非常方便的动态新增属性或者方法
+      person.sex = 'male'
+      console.log(person)
+
+      //新增方法
+      person.sing = function () {}
+      console.log(person)
+
+      //删除
+      delete person.uname
+      console.log(person)
+    </script>
+  </body>
+</html>

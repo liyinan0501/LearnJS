@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>Box</div>
+    <div>Bo2</div>
+    <div class="three">Box3</div>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <ul class="nav">
+      <li>front</li>
+      <li>info</li>
+      <li>contact</li>
+    </ul>
+    <script>
+      //CSS选择器匹配
+
+      //document.querySelector
+      //匹配第一个元素
+      //返回HTML Element 对象
+      let div = document.querySelector('div')
+      console.log(div)
+
+      let div3 = document.querySelector('.three')
+      console.log(div3)
+
+      let li = document.querySelector('ul li:last-child')
+      console.log(li)
+
+      //document.querySelectorAll
+      //匹配多个元素
+      //返回 NodeList 伪数组对象集合
+      //伪数组没有pop push 等数组方法
+      let liAll = document.querySelectorAll('ul li')
+      console.log(liAll)
+      console.log('..........................')
+      for (let i = 0; i < liAll.length; i++) {
+        console.log(liAll[i])
+      }
+      console.log('..........................')
+
+      let nav = document.querySelectorAll('.nav li')
+      for (let i = 0; i < nav.length; i++) {
+        console.log(nav[i])
+      }
+
+      //其他选择器
+      //根据id获取一个元素
+      document.getElementById('nav')
+      //根据标签获取一类元素 获取页面所有的div
+      document.getElementsByTagName('div')
+      //根据类名获取元素 获取页面所有类名为w的
+      document.getElementsByClassName('w')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      //使用表单，prompt获取来的数据默认是字符串类型的，此时不能直接的进行加减运算。
+
+      // + 号两边只要有一个是字符串，会把另一边也转成字符串
+      // 内部隐蔽的把1转换成字符串的’1‘
+      let age = prompt('your age')
+      let final = age + 1
+      console.log(final, typeof final)
+
+      //除了+号以外的运算符，比如 - * / 都会把数据转换成数字类型
+      //把字符串的age1转换成数字类型
+      let age1 = prompt('your wife age')
+      let final1 = age * 3
+      console.log(final1, typeof final1)
+
+      // + 号作为正好解析可以转成数字类型
+      let num1 = '10'
+      console.log(num1)
+      console.log(+num1) //number
+      console.log(-num1) //number
+
+      // +'11' 转为数字
+      let num = 10
+      console.log(num, typeof (num + +'11'))
+      console.log(typeof +'123') //number
+      console.log(+'11' + 11) //22
+    </script>
+  </body>
+</html>

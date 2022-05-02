@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Pink Memory</div>
+    <script>
+      let div = document.querySelector('div')
+
+      // 修改标签内容 innerText 不能解析标签
+      div.innerText = 'Red Memory!'
+
+      // 修改标签内容 innerHTML 能解析标签 - 尽量用innerHTML
+      div.innerHTML = '<h3>Red Memory</h3>'
+    </script>
+  </body>
+</html>

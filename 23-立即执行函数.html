@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>click!</button>
+    <script>
+      //立即执行函数
+      //无需调用
+
+      //let fn = function(){}
+      // fn()
+
+      //方式1
+      //(function(){})()
+      ;(function () {
+        console.log('haha')
+      })()
+
+      //必须要在前面加分号;
+
+      //带入参数
+      ;(function (x, y) {
+        console.log(x + y)
+      })(1, 2)
+
+      //方式2
+      //(function(){}())
+      //;(function(){console.log('123')}())
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+      .active {
+        width: 300px;
+        height: 300px;
+        background-color: hotpink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <script>
+      //用类写样式，id留给js
+      let box = document.querySelector('div')
+      box.className = 'one active'
+
+      let box2 = document.querySelector('.two')
+      // add 追加类名
+      box2.classList.add('active')
+      // remove 删除类名
+      box2.classList.remove('two')
+      //toggle 切换类 有就减掉，没有就加上
+      box2.classList.toggle('active')
+    </script>
+  </body>
+</html>

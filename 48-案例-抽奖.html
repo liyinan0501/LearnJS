@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .box {
+        width: 600px;
+        margin: 50px auto;
+        display: flex;
+        font-size: 25px;
+        line-height: 40px;
+      }
+
+      .qs {
+        width: 450px;
+        height: 40px;
+        color: red;
+      }
+
+      .btns {
+        text-align: center;
+      }
+
+      .btns button {
+        width: 120px;
+        height: 35px;
+        margin: 0 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Get Winner</h2>
+    <div class="box">
+      <span>Winner: </span>
+      <div class="qs">Winner Name</div>
+    </div>
+    <div class="btns">
+      <button class="start">start</button>
+      <button class="end">end</button>
+    </div>
+
+    <script>
+      let arr = ['Tom', 'Jack', 'Luis', 'Wike', 'John']
+      let start = document.querySelector('.start')
+      let end = document.querySelector('.end')
+      let winnerShow = document.querySelector('.qs')
+      let timer = 0
+      let random = 0
+      start.addEventListener('click', function () {
+        if (arr.length === 1) {
+          alert('Done')
+          winnerShow.innerHTML = 'Empty'
+          start.disabled = end.disabled = true
+        } else {
+          timer = setInterval(() => {
+            random = getRandom(0, arr.length - 1)
+            winnerShow.innerHTML = arr[random]
+          }, 15)
+        }
+      })
+      end.addEventListener('click', () => {
+        clearInterval(timer)
+        arr.splice(random, 1)
+      })
+      function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min
+      }
+    </script>
+  </body>
+</html>

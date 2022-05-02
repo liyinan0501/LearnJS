@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" value="Please input" />
+    <button>Button</button>
+    <input type="checkbox" name="" id="3" class="agree" />
+    <script>
+      let input = document.querySelector('input')
+      input.type = 'password'
+
+      let btn = document.querySelector('button')
+      //false 使按钮启用，true 使按钮不可用
+      btn.disabled = true
+
+      let checkbox = document.querySelector('.agree')
+      checkbox.checked = true
+    </script>
+  </body>
+</html>

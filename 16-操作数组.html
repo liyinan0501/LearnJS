@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = ['red', 'green']
+
+      //在数组末尾添加新元素，并返回数组新的长度
+      console.log(arr.push('blue'))
+      //改变原数组
+      console.log(arr)
+
+      //在数组开头添加新元素，并返回数组新的长度
+      console.log(arr.unshift('yellow'))
+      //改变原数组
+      console.log(arr)
+
+      //删除数组最后一个元素，并返回删掉的元素
+      console.log(arr.pop())
+      console.log(arr)
+
+      //删除数组第一个元素，并返回删掉的元素
+      console.log(arr.shift())
+      console.log(arr)
+
+      let arr1 = ['red', 'green', 'blue', 'yellow']
+      //删除指定元素, 并返回删掉的元素
+      //第一个1 是从索引号1的位置开始删
+      //第二个2 是删除几个
+      console.log(arr1)
+      console.log(arr1.splice(1, 2))
+      console.log(arr1)
+    </script>
+  </body>
+</html>

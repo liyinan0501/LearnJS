@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding-inline-end: 0;
+      }
+
+      table {
+        margin: 0 auto;
+        text-align: center;
+        border-collapse: collapse;
+      }
+
+      table th,
+      td {
+        border: 1px solid black;
+        padding: 15px;
+      }
+
+      table caption {
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let productName = 'iPhone 14 pro max'
+      let productPrice = +prompt('Input the product price: ')
+      let quantity = +prompt('Input the quantity: ')
+      let address = prompt('Input the delivery address: ')
+      let total = productPrice * quantity
+      document.write(`
+        <table>
+          <caption>Order Confirmation</caption>
+          <tr>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Delivery Address</th>
+          </tr>
+          <tr>
+            <td>${productName}</td>
+            <td>${productPrice}Euros</td>
+            <td>${quantity}</td>
+            <td>${total}Euros</td>
+            <td>${address}</td>
+          </tr>
+        </table>
+      `)
+    </script>
+  </body>
+</html>

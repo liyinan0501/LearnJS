@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      //显式转换
+
+      //Number
+      console.log(Number('10'))
+      console.log(parseInt('10'))
+      console.log(parseInt('10.111')) //10
+      console.log(parseInt('10.999')) //10
+      console.log(parseFloat('10.999')) //10.999
+
+      //只能放数字类型的字符
+      console.log(Number('10.01abc')) //NaN
+      //自动过滤abc以数字开头的字符串 经常用于过滤单位
+      console.log(parseFloat('10.01abc')) //10.01
+      console.log(parseFloat('100px')) //100
+      console.log(parseFloat('px100px')) //NaN
+
+      //String
+      console.log(String(10))
+      let age = 18
+      console.log(age.toString())
+
+      //括号里面是2 就是10进制转2进制
+      console.log(age.toString(2))
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 短路现象存在&& || 中
+      // && 左边为false 右边不执行 直接出结果false
+      // || 左边为true 右边不执行 直接出结果true
+
+      console.log(false && 20) //false
+      console.log(5 < 3 && 20) //false
+      console.log(undefined && 20) //undefined
+      console.log(null && 20) //null
+      console.log(0 && 20) //0
+      console.log(10 && 20) //20
+
+      console.log(false || 20) //20
+      console.log(5 < 3 || 20) //20
+      console.log(undefined || 20) //20
+      console.log(null || 20) //20
+      console.log(0 || 20) //20
+      console.log(10 || 20) //10
+
+      // 数字0是false 其他数字为true
+      // 空字符串''是false，其他字符串都是true
+      // undefine, null, NaN 是false
+
+      function fun(x, y) {
+        x = x || 0 //x=0
+        y = y || 0 //y=0
+      }
+      fun()
+    </script>
+  </body>
+</html>

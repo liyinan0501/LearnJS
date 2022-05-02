@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fn(arr) {
+        let min = (max = arr[0])
+        for (let i = 0; i < arr.length; i++) {
+          //option1
+          max < arr[i] ? (max = arr[i]) : max
+          min > arr[i] ? (min = arr[i]) : min
+
+          //option2
+          // max = max < arr[i] ? arr[i] : max
+          // min = min > arr[i] ? arr[i] : min
+        }
+        return [max, min]
+      }
+      let value = fn([1, , 5, 8, 2, 0])
+      document.write(`max: ${value[0]}, min: ${value[1]}`)
+    </script>
+  </body>
+</html>
