@@ -7,18 +7,19 @@
     <title>Document</title>
   </head>
   <body>
-    <button>Click</button>
+    <button>click</button>
     <ul>
-      <li>I am content</li>
+      <li>第1个</li>
+      <li class="two">第2个</li>
+      <li>第3个</li>
+      <li>第4个</li>
     </ul>
     <script>
-      //删除节点
-      //要删除元素必须通过父元素删除
-      //父元素.removeChild(要删除的元素)
       let btn = document.querySelector('button')
-      let ul = document.querySelector('ul')
+      let two = document.querySelector('.two')
       btn.addEventListener('click', function () {
-        ul.removeChild(ul.children[0])
+        two.nextElementSibling.style.color = 'red'
+        two.previousElementSibling.style.color = 'red'
       })
     </script>
   </body>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>I am the first</li>
+      <li>I am the second</li>
+    </ul>
+    <script>
+      let body = document.querySelector('body')
+      // 1.创建新标签节点
+      let btn = document.createElement('button')
+      // div.className = 'className'
+      btn.innerHTML = 'click'
+      // 2.追加节点 (从后面追加)
+      body.appendChild(btn)
+
+      let ul = document.querySelector('ul')
+      // 1.创建新标签节点
+      let li = document.createElement('li')
+      li.innerHTML = 'This is li tag'
+      // 2.追加节点 (从后面追加)
+      ul.appendChild(li)
+
+      // 2.追加节点（从前面追加）
+      let li2 = document.createElement('li')
+      li2.innerHTML = 'This is other li tag'
+      ul.insertBefore(li2, ul.children[1])
+    </script>
+  </body>
+</html>

@@ -7,19 +7,17 @@
     <title>Document</title>
   </head>
   <body>
-    <button>Click</button>
     <ul>
       <li>I am content</li>
     </ul>
     <script>
-      //删除节点
-      //要删除元素必须通过父元素删除
-      //父元素.removeChild(要删除的元素)
-      let btn = document.querySelector('button')
+      //cloneNode 克隆节点
+      //元素.cloneNode(true/false)
+      //true  代表克隆时包含后代节点一起克隆
+      //false 代表克隆时不包含后代节点 (默认)
       let ul = document.querySelector('ul')
-      btn.addEventListener('click', function () {
-        ul.removeChild(ul.children[0])
-      })
+      let newUl = ul.cloneNode(true) //空()默认为false
+      document.body.append(newUl)
     </script>
   </body>
 </html>
