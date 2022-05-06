@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 66-time object methods 时间对象方法
+
+      // first need instantiated class and then can use methods
+      let date = new Date()
+
+      //get year, month, and date
+      console.log(date.getFullYear()) //2022
+      console.log(date.getMonth()) //4, it from 0 to 11
+      console.log(date.getMonth() + 1) // need plus 1, can get current month
+      console.log(date.getDate()) // 6
+
+      //get hour, min, second
+      console.log(date.getHours())
+      console.log(date.getMinutes())
+      console.log(date.getSeconds())
+
+      //day in the week
+      console.log(date.getDay()) // 5 means Friday
+    </script>
+  </body>
+</html>
