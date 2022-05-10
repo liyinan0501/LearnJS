@@ -13,7 +13,8 @@
 
       //Number
       console.log(Number('10'))
-      console.log(parseInt('10'))
+      //自动过滤abc以数字开头的字符串 经常用于过滤单位
+      console.log(parseInt('10abc')) //10
       console.log(parseInt('10.111')) //10
       console.log(parseInt('10.999')) //10
       console.log(parseFloat('10.999')) //10.999
