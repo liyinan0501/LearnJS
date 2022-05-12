@@ -24,8 +24,20 @@
       <div class="son"></div>
     </div>
     <script>
-      //Bubbling: mouseover and mouseout
-      //no-Bubbling: mouseenter and mouseleave
+      //79-Bubbling stopPropagation()
+      // During the bubbling, some type of events in older generation will trigger
+      let fa = document.querySelector('.father')
+      let son = document.querySelector('.son')
+      document.addEventListener('click', function () {
+        console.log('grandfather')
+      })
+      fa.addEventListener('click', function () {
+        console.log('father')
+      })
+      son.addEventListener('click', function (e) {
+        console.log('son')
+        e.stopPropagation()
+      })
     </script>
   </body>
 </html>

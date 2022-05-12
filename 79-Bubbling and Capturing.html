@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .father {
+        margin: 100px auto;
+        width: 500px;
+        height: 500px;
+        background-color: pink;
+      }
+      .son {
+        width: 200px;
+        height: 200px;
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+    <script>
+      //79-Bubbling and Capturing
+      // During the bubbling, some type of events in older generation will trigger
+      let fa = document.querySelector('.father')
+      let son = document.querySelector('.son')
+      document.addEventListener(
+        'click',
+        function () {
+          console.log('grandfather')
+        },
+        true
+      )
+      fa.addEventListener(
+        'click',
+        function () {
+          console.log('father')
+        },
+        true
+      )
+      fa.addEventListener('dblclick', function () {
+        console.log('father!!!')
+      })
+      son.addEventListener(
+        'click',
+        function () {
+          console.log('son')
+        },
+        true
+      )
+      // setting all true is turning to the capturing from older to yunger element
+      // setting all false (defult) is turning to the capturing from younger to old element
+    </script>
+  </body>
+</html>
