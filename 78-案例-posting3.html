@@ -144,7 +144,15 @@
     </div>
 
     <!-- 添加了hidden属性元素会直接隐藏掉 -->
-    <li hidden></li>
+    <li hidden>
+      <div class="info">
+        <img class="userpic" src="./images/9.6/03.jpg" />
+        <span class="username">死数据:百里守约</span>
+        <p class="send-time">死数据:发布于 2020年12月05日 00:07:54</p>
+      </div>
+      <div class="content">死数据:111</div>
+      <span class="the_del">X</span>
+    </li>
 
     <script>
       // maxlength 是一个表单属性, 作用是给表单设置一个最大长度
@@ -185,37 +193,34 @@
         if (textarea.value.trim() === '') {
           textarea.value = ''
           useCount.innerHTML = 0
-          return alert('Input can not be empty')
+          alert('input can not be empty')
+        } else {
+          let li = document.createElement('li')
+          let random = getRandom(0, dataArr.length - 1)
+          function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+          }
+          li.innerHTML = `
+          <div class="info">
+            <img class="userpic" src=${dataArr[random].imgSrc} />
+            <span class="username">${dataArr[random].uname}</span>
+            <p class="send-time">${new Date().toLocaleString()}</p>
+          </div>
+          <div class="content">${textarea.value}</div>
+          <span class="the_del">X</span>
+          `
+          let del = li.querySelector('.the_del')
+          del.addEventListener('click', function () {
+            ul.removeChild(li)
+          })
+          ul.insertBefore(li, ul.children[0])
+          textarea.value = ''
+          useCount.innerHTML = 0
         }
-        function getRandom(min, max) {
-          return Math.floor(Math.random() * (max - min + 1)) + min
-        }
-        let random = getRandom(0, dataArr.length - 1)
-        let li = document.createElement('li')
-        li.innerHTML = `
-        <div class="info">
-          <img class="userpic" src=${dataArr[random].imgSrc} />
-          <span class="username">${dataArr[random].uname}</span>
-          <p class="send-time">${new Date().toLocaleString()}</p>
-        </div>
-        <div class="content">${textarea.value}</div>
-        <span class="the_del">X</span>
-        `
-        let del = li.querySelector('.the_del')
-        del.addEventListener('click', function () {
-          ul.removeChild(li)
-        })
-        ul.insertBefore(li, ul.children[0])
-        textarea.value = ''
-        useCount.innerHTML = 0
       })
-
-      // enter key for posting
       textarea.addEventListener('keyup', function (e) {
         if (e.key === 'Enter') {
           send.click()
-          textarea.value = ''
-          useCount.innerHTML = 0
         }
       })
     </script>
