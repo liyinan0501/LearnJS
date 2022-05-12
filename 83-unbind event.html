@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Click1</button>
+    <br />
+    <button class="second">Click2</button>
+    <script>
+      // 83-unbind event
+      // L0 onlick: the second envent will cover the previous event
+      let btn = document.querySelector('button')
+      btn.onclick = function () {
+        console.log('1st')
+      }
+      btn.onclick = function () {
+        console.log('2st')
+      }
+      // unbind onlick
+      //btn.onclick = null
+
+      // L1 onlick: the second envent will never cover the previous event
+      let btn2 = document.querySelector('.second')
+      btn2.addEventListener('click', function () {
+        console.log('1')
+      })
+      btn2.addEventListener('click', add)
+      function add() {
+        console.log('2')
+      }
+      // unbind onlick
+      // btn2.removeEventListener('click', add)
+    </script>
+  </body>
+</html>
