@@ -8,11 +8,19 @@
   </head>
   <body>
     <button>click</button>
+    <input type="text" />
     <script>
       let btn = document.querySelector('button')
       // e is called Event Object (MouseEvent)
       btn.addEventListener('click', function (e) {
         console.log(e)
+      })
+      let input = document.querySelector('input')
+      //keyup or keydown
+      input.addEventListener('keyup', function (e) {
+        if (e.key === 'Enter') {
+          console.log('you input a enter')
+        }
       })
     </script>
   </body>
