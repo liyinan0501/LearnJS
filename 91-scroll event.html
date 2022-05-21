@@ -12,12 +12,16 @@
     </style>
   </head>
   <body>
+    <button>Jump to 700px place</button>
     <script>
       window.addEventListener('scroll', function () {
-        //document.documentElement get html element
-        console.log(document.documentElement.scrollTop) // html scrollTop distance
-        // document.documentElement.scrollTop = 500  can be edited
-        // when open browser direct jump the 500 place
+        //document.documentElement could get html element
+        console.log(document.documentElement.scrollTop)
+      })
+      let btn = document.querySelector('button')
+      btn.addEventListener('click', function () {
+        //document.documentElement can be editted
+        document.documentElement.scrollTop = 700
       })
     </script>
   </body>
