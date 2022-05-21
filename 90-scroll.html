@@ -35,11 +35,12 @@
     </div>
     <script>
       let div = document.querySelector('div')
+      //获取元素内容的总大小
       console.log(div.scrollWidth) // only content width
       console.log(div.scrollHeight) // only content height
 
       div.addEventListener('scroll', function () {
-        // how many px scroll top
+        // how many px scroll top 有多少px滚上去了
         console.log(this.scrollTop)
         // console.log(this.scrollLeft)
       })

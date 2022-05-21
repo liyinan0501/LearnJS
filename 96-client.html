@@ -11,6 +11,7 @@
         background-color: pink;
         overflow: auto;
         margin: 100px auto;
+        border: 10px solid red;
       }
     </style>
   </head>
@@ -35,14 +36,12 @@
     </div>
     <script>
       let div = document.querySelector('div')
-      //获取元素内容的总大小
       // scroll get only content part width and height
       console.log(div.scrollWidth)
       console.log(div.scrollHeight)
 
       console.log('--------------------------------------')
 
-      // 获取元素自身的大小，包括自身设置的宽高，padding，border
       // offset get whole element width and height
       //includes content width and height, padding, border
       console.log(div.offsetWidth)
@@ -52,6 +51,16 @@
       // can not be edited
       console.log(div.offsetTop)
       console.log(div.offsetLeft)
+
+      console.log('**************************************')
+
+      // 可视区域部分
+      // not includes box border, but includes padding
+      console.log(div.clientWidth)
+      console.log(div.clientHeight)
+
+      console.log(div.clientTop) // border width
+      console.log(div.clientLeft)
     </script>
   </body>
 </html>

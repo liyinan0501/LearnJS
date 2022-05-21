@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 可视区变化就会触发
+      window.addEventListener('resize', function () {
+        let w = document.documentElement.clientWidth
+        // console.log(document.documentElement.clientWidth)
+        if (w >= 1680) {
+          document.body.style.background = 'pink'
+        } else if (w < 1000) {
+          document.body.style.background = 'hotpink'
+        } else {
+          document.body.style.background = 'deeppink'
+        }
+        console.log(document.documentElement.clientWidth)
+        console.log(document.documentElement.clientHeight)
+      })
+    </script>
+  </body>
+</html>
