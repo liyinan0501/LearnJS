@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,6 +10,7 @@
         height: 150px;
         background-color: pink;
         overflow: auto;
+        margin: 100px auto;
       }
     </style>
   </head>
@@ -35,14 +35,21 @@
     </div>
     <script>
       let div = document.querySelector('div')
-      console.log(div.scrollWidth) // content width
-      console.log(div.scrollHeight) // content height
+      // scroll get only content part width and height
+      console.log(div.scrollWidth)
+      console.log(div.scrollHeight)
 
-      div.addEventListener('scroll', function () {
-        // how many px scroll top
-        console.log(this.scrollTop)
-        // console.log(this.scrollLeft)
-      })
+      console.log('--------------------------------------')
+
+      // offset get whole element width and height
+      //includes content width and height, padding, border
+      console.log(div.offsetWidth)
+      console.log(div.offsetHeight)
+
+      // 获取元素距离自己定位父级元素的左，上距离
+      // can not be edited
+      console.log(div.offsetTop)
+      console.log(div.offsetLeft)
     </script>
   </body>
 </html>
