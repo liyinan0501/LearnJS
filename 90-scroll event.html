@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 150px;
+        height: 150px;
+        background-color: pink;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+      texttexttexttexttexttexttexttexttexttext
+    </div>
+    <script>
+      let div = document.querySelector('div')
+      console.log(div.scrollWidth) // content width
+      console.log(div.scrollHeight) // content height
+
+      div.addEventListener('scroll', function () {
+        // how many px scroll top
+        console.log(this.scrollTop)
+        // console.log(this.scrollLeft)
+      })
+    </script>
+  </body>
+</html>
