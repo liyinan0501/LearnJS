@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let notes = [
+        {
+          id: 1,
+          content: 'HTML on helppoa',
+          date: '2017-12-10T17:30:31.098Z',
+          important: true,
+        },
+        {
+          id: 2,
+          content: 'Selain pystyy suorittamaan vain javascriptiä',
+          date: '2017-12-10T18:39:34.091Z',
+          important: false,
+        },
+        {
+          id: 3,
+          content: 'HTTP-protokollan tärkeimmät metodit ovat GET ja POST',
+          date: '2017-12-10T19:20:14.298Z',
+          important: true,
+        },
+        {
+          id: 4,
+          content: 'Testing',
+          date: '2017-12-10T19:20:14.298Z',
+          important: true,
+        },
+      ]
+      // 根据id替换数组
+      let newObj = {
+        id: 4,
+        content: 'TestingXXXXX',
+        date: '2017-12-10T19:20:14.298Zxxx',
+        important: false,
+      }
+      //   let index = 0
+      //   index = notes.findIndex((item) => item.id === newObj.id)
+      //   console.log(index)
+
+      notes.splice(
+        notes.findIndex((item) => item.id === newObj.id),
+        1,
+        newObj
+      )
+      console.log(notes)
+    </script>
+  </body>
+</html>
