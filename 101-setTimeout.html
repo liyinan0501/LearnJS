@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Clear Timer</button>
+    <script>
+      // setTimeout 定时器-延时函数
+      // 只执行一次
+      // let timer = setTimeout(回调函数,等待的毫秒数)
+      // clearTimeout(timer)
+      let btn = document.querySelector('button')
+      let timer = setTimeout(function () {
+        console.log(111)
+      }, 3000)
+      btn.addEventListener('click', () => {
+        clearTimeout(timer)
+      })
+    </script>
+  </body>
+</html>

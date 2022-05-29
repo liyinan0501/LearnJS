@@ -8,6 +8,15 @@
     <style></style>
   </head>
   <body>
-    <script></script>
+    <div></div>
+    <script>
+      // using Recursion to simulate setInterval
+      let div = document.querySelector('div')
+      function fn() {
+        div.innerHTML = new Date().toLocaleString()
+        setTimeout(fn, 1000)
+      }
+      fn()
+    </script>
   </body>
 </html>
