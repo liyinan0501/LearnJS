@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <button class="forward">Forward</button>
+    <button class="back">Back</button>
+    <script>
+      // history
+      // back():go back
+      // forward(): go forward
+      // go(1 or -1): go forward 1 page or go back 1 page
+      let forward = document.querySelector('.forward')
+      let back = document.querySelector('.back')
+      forward.addEventListener('click', () => {
+        history.forward()
+        // history.go(1)
+      })
+      back.addEventListener('click', () => {
+        history.back()
+        // history.go(-1)
+      })
+    </script>
+  </body>
+</html>

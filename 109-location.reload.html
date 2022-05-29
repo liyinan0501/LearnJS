@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <button>Refreash</button>
+    <script>
+      // location.reload()
+      // refreash the page
+      let btn = document.querySelector('button')
+      btn.addEventListener('click', () => {
+        //location.reload(): normal refreash
+        // location.reload(true): force refreash (not read from local cache)
+        // mac: shift+command+r
+        location.reload(true)
+      })
+    </script>
+  </body>
+</html>

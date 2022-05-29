@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="http://www.google.com"
+        >Payment succeeds! after <span>5</span> s, will jump to front page</a
+      >
+      <br />
+    </div>
+    <script>
+      let a = document.querySelector('a')
+      let duration = 3
+      let timer = setInterval(function () {
+        a.innerHTML = `Payment succeeds! after <span>${duration--}</span> s, will jump to front page`
+        if (duration === 0) {
+          location.href = 'http://www.google.com'
+          clearInterval(timer)
+        }
+      }, 1000)
+      a.addEventListener('click', function () {
+        clearInterval(timer)
+      })
+    </script>
+  </body>
+</html>
