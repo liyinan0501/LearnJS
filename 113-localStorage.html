@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // Local Storage
+
+      // saving:
+      // localStorage.setItem(key, value)
+      localStorage.setItem('uname', 'jack')
+      localStorage.setItem('age', 18)
+
+      // for complex type: - Neet transfer obj to JSON form
+      let obj = {
+        uname: 'joe',
+        age: 15,
+        address: 'Turku',
+      }
+      // JSON.stringify() transfer obj to JSON like below:
+      // let obj = {
+      //   "uname": "joe",
+      //   "age": 15,
+      //   "address": "Turku",
+      // }
+      localStorage.setItem('obj', JSON.stringify(obj)) //[object Object]
+
+      // retrieve:
+      // localStorage.getItem(key)
+      console.log(localStorage.getItem('uname'))
+      console.log(localStorage.getItem('obj'))
+      // {"uname":"joe","age":15,"address":"Turku"} is a string, not a object.
+      // JSON.parse() transfer JSON to obj
+      console.log(JSON.parse(localStorage.getItem('obj')))
+      // {uname: 'joe', age: 15, address: 'Turku'} is a obj, not a string
+
+      // deleting:
+      // localStorage.removeItem(key)
+      localStorage.removeItem('uname')
+    </script>
+  </body>
+</html>
