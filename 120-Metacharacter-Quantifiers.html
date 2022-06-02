@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // Metacharacter-Quantifiers
+      // 元字符-量词
+      // * 重复零次或多次
+      // + 重复一次或多次
+      // ? 重复零次或一次
+      // {n} 重复n次
+      // {n,} 重复n次或更多次
+      // {n,m} 重复n次到m次
+      // 注意：逗号左右两侧千万不要出现空格
+      console.log(/a/.test('a')) //true
+      // * : n >= 0
+      console.log(/a*/.test('')) //true
+      console.log(/a*/.test('a')) //true
+      console.log(/a*/.test('aa')) //true
+      console.log(/a*/.test('aaaaaa')) //true
+      console.log(/a*/.test('b')) //true
+
+      console.log('---------------------------')
+
+      // + : n >= 1
+      console.log(/a+/.test('')) //false
+      console.log(/a+/.test('a')) //true
+      console.log(/a+/.test('aa')) //true
+      console.log(/a+/.test('aaaaaa')) //true
+      console.log(/a+/.test('b')) //false
+
+      console.log('---------------------------')
+
+      // ? : 0 or 1
+      console.log(/^a?$/.test('')) //true
+      console.log(/^a?$/.test('a')) //true
+      console.log(/^a?$/.test('aa')) //false
+      console.log(/^a?$/.test('aaaaaa')) //false
+      console.log(/^a?$/.test('b')) //false
+
+      console.log('---------------------------')
+
+      // {n}: 只能出现n次
+      console.log(/^a{3}$/.test('aa')) //false
+      console.log(/^a{3}$/.test('aaa')) //true
+      console.log(/^a{3}$/.test('aaaa')) //false
+
+      console.log('---------------------------')
+
+      // {n,} >= n
+      console.log(/^a{3,}$/.test('aa')) //false
+      console.log(/^a{3,}$/.test('aaa')) //true
+      console.log(/^a{3,}$/.test('aaaa')) //true
+
+      console.log('---------------------------')
+
+      // {n,m} >=n <=m
+      console.log(/^a{3,6}$/.test('aa')) //false
+      console.log(/^a{3,6}$/.test('aaa')) //true
+      console.log(/^a{3,6}$/.test('aaaa')) //true
+      console.log(/^a{3,6}$/.test('aaaaa')) //true
+      console.log(/^a{3,6}$/.test('aaaaaaaa')) //false
+
+      console.log('---------------------------')
+
+      // \d means 0-9
+      console.log(/^[\d]{3,6}$/.test(12)) //false
+      console.log(/^[\d]{3,6}$/.test(123)) //true
+      console.log(/^[\d]{3,6}$/.test(1234)) //true
+      console.log(/^[\d]{3,6}$/.test(12345)) //true
+      console.log(/^[\d]{3,6}$/.test(123456)) //true
+      console.log(/^[\d]{3,6}$/.test(1234567)) //false
+    </script>
+  </body>
+</html>
