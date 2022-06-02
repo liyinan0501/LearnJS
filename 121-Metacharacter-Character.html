@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // Metacharacter-Character
+      // 元字符-字符类
+      // [] 匹配字符集合
+      // 后面的字符串只要包含abc中任意一个字符，都返回true。
+      // 三取一
+      console.log(/[abc]/.test('')) //false
+      console.log(/[abc]/.test('andy')) //true
+      console.log(/[abc]/.test('abc')) //true
+      console.log(/[abc]/.test('cry')) //true
+      console.log(/[abc]/.test('die')) //false
+
+      console.log('---------------------------')
+
+      // 与无中括号 区分！！ 以下必须包含abc
+      console.log(/abc/.test('andy')) //false
+      console.log(/abc/.test('abcd')) //true
+      console.log(/abc/.test('cry')) //false
+      console.log(/abc/.test('die')) //false
+
+      console.log('---------------------------')
+
+      console.log(/^[abc]$/.test('abc')) //false // 三取一
+      console.log(/^[abc]$/.test('a')) //true
+      console.log(/^[abc]$/.test('b')) //true
+      console.log(/^[abc]$/.test('c')) //true
+
+      console.log('---------------------------')
+
+      // 字符类-连字符
+      // 表示一个范围 range
+      // 26个英文字母选其中一个
+      console.log(/^[a-z]$/.test('d')) //true
+      console.log(/^[a-zA-Z]$/.test('D')) //true
+      console.log(/^[a-zA-Z]$/.test('DD')) //false
+      console.log(/^[a-zA-Z0-9]$/.test('3')) //true
+      console.log(/^[a-zA-Z0-9]$/.test('3d')) //false
+
+      console.log('---------------------------')
+
+      //取一
+      console.log(/^[a-zA-Z0-9-]$/.test('-')) //true
+      console.log(/^[a-zA-Z0-9-_]$/.test('_')) //true
+
+      console.log()
+
+      // example
+      //^[1-9][0-9]{4,}  从10000开始
+      // ^abc+$ c可以出现1次或多次
+      // 量词只针对前一位c有效，对ab无效。
+    </script>
+  </body>
+</html>
