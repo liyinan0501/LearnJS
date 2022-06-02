@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // Metacharacter-Boundary Construct
+      // 元字符-边界符
+      // ^ The beginning of a line
+      // $ The end of a line
+      // ^ and $ together means exact matching
+      console.log(/ha/.test('hahaha')) //true
+      console.log(/ha/.test('Sha')) //true
+      console.log(/^ha/.test('Sha')) //false
+      console.log(/ha$/.test('Sha')) //true
+      console.log(/^ha$/.test('hasdfsdfsdfha')) //false
+      console.log(/^ha$/.test('ha')) //true
+    </script>
+  </body>
+</html>
