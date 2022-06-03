@@ -8,6 +8,10 @@
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/register.css" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_2143783_iq6z4ey5vu.css"
+    />
   </head>
 
   <body>
@@ -269,6 +273,67 @@
             return true
           }
         }
+
+        let password = document.querySelector('[name=password]')
+        password.addEventListener('change', verifyPassword)
+
+        function verifyPassword() {
+          let span = password.nextElementSibling
+          let reg = /^[a-zA-Z0-9-_]{6,20}$/
+          if (!reg.test(password.value)) {
+            span.innerHTML = `invalid password`
+            return false
+          } else {
+            span.innerHTML = ''
+            return true
+          }
+        }
+
+        let confirm = document.querySelector('[name=confirm]')
+        confirm.addEventListener('change', verifyConfirm)
+
+        function verifyConfirm() {
+          let span = confirm.nextElementSibling
+          if (password.value !== confirm.value) {
+            span.innerHTML = `input same passwords`
+            return false
+          } else {
+            return true
+          }
+        }
+
+        let icon = document.querySelector('.icon-queren')
+        icon.addEventListener('click', function () {
+          icon.classList.toggle('icon-queren2')
+        })
+
+        let form = document.querySelector('form')
+        form.addEventListener('submit', function (e) {
+          if (!verifyUsername()) {
+            e.preventDefault()
+          }
+          if (!verifyPhone()) {
+            e.preventDefault()
+          }
+          if (!verifyCode()) {
+            e.preventDefault()
+          }
+          if (!verifyPassword()) {
+            e.preventDefault()
+          }
+          if (!verifyConfirm()) {
+            e.preventDefault()
+          }
+          if (!icon.classList.contains('icon-queren2')) {
+            alert('Agree the terms')
+            e.preventDefault()
+          }
+
+          // classList.add()
+          // classList.remove()
+          // classList.toggle()
+          // classList.contains()
+        })
       })()
     </script>
   </body>

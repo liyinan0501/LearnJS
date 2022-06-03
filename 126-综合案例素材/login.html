@@ -77,7 +77,30 @@
     </div>
   </div>
   <script>
+      let login = document.querySelector('.dl')
+      let check = document.querySelector('.remember')
+      let username = document.querySelector('[name=username]')
+      let password = document.querySelector('[name=password]')
+      login.addEventListener('click', function (e) {
+        e.preventDefault()
+        if (!check.checked) {
+          alert('Agree the terms')
+          return
+        } 
+        let obj = {
+          username: username.value,
+          password: password.value
+        }
+        localStorage.setItem('data',JSON.stringify(obj))
+        location.href = './index.html'
+      })
 
+      let obj = JSON.parse(localStorage.getItem('data'))
+      if (obj) {
+        username.value= obj.username
+        password.value = obj.password
+        check.checked = true
+      }
   </script>
 </body>
 
