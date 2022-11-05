@@ -47,8 +47,8 @@
       let close_btn = document.querySelectorAll('.close')
       for (let i = 0; i < close_btn.length; i++) {
         close_btn[i].addEventListener('click', function () {
-          // close_btn[i].parentNode.style.display = 'none'
-          this.parentNode.style.visibility = 'hidden'
+          // close_btn[i].parentNode.style.display = 'none' // 不保留位置
+          this.parentNode.style.visibility = 'hidden' // 保留位置
         })
       }
     </script>
