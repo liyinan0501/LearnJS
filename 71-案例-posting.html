@@ -204,6 +204,7 @@
           textarea.value = ''
           useCount.innerHTML = 0
           alert('Can not input the empty')
+          return
         }
         function getRandom(min, max) {
           return Math.floor(Math.random() * (max - min + 1)) + min
@@ -224,9 +225,9 @@
         <span class="the_del">X</span>
         `
         // 需求4
-        // 在事件处理函数里面获取点击按钮,注册点击事件
+        // 在事件处理函数里面获取点击按钮，注册点击事件。
         // (易错点: 必须在事件里面获取,外面获取不到) 删除对应的元素 (通过this获取对应的那条需要删除的元素)
-        // 放到追加进ul的前面，这样创建的元素同时顺便绑定事件
+        // 放到追加进ul的前面，这样创建的元素同时顺便绑定事件。
         let del = li.querySelector('.the_del')
         del.addEventListener('click', function () {
           ul.removeChild(li)
@@ -234,6 +235,7 @@
         // 利用时间对象将时间动态化 new Date().toLocaleString()
         // 追加给ul 用父元素.insertBefore(子元素，哪个元素前面)
         ul.insertBefore(li, ul.children[0])
+
         // 需求5
         // 将表单域内容重置为空
         // 将userCount里面的内容重置为0
