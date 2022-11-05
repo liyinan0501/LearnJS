@@ -110,7 +110,7 @@
         let m = parseInt((count / 60) % 60)
         m = m < 10 ? '0' + m : m
         let s = parseInt(count % 60)
-        s < 10 ? '0' + s : s
+        s = s < 10 ? '0' + s : s
         hour.innerHTML = h
         minute.innerHTML = m
         second.innerHTML = s
