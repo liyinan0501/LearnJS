@@ -12,18 +12,19 @@
     <button class="second">Click2</button>
     <script>
       // 83-unbind event
-      // L0 onlick: the second envent will cover the previous event
+      // L0 onclick: the second event will cover the previous event.
       let btn = document.querySelector('button')
       btn.onclick = function () {
         console.log('1st')
       }
       btn.onclick = function () {
+        // this will cover the '1st'.
         console.log('2st')
       }
-      // unbind onlick
+      // unbind onclick
       //btn.onclick = null
 
-      // L1 onlick: the second envent will never cover the previous event
+      // L1 onclick: the second event will never cover the previous event.
       let btn2 = document.querySelector('.second')
       btn2.addEventListener('click', function () {
         console.log('1')
@@ -32,7 +33,7 @@
       function add() {
         console.log('2')
       }
-      // unbind onlick
+      // unbind onclick
       // btn2.removeEventListener('click', add)
     </script>
   </body>

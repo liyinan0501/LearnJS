@@ -24,8 +24,8 @@
       <div class="son"></div>
     </div>
     <script>
-      //79-Bubbling and Capturing
-      // During the bubbling, some type of events in older generation will trigger
+      // 79-Bubbling and Capturing
+      // During the bubbling, some type of events in older generation will trigger.
       let fa = document.querySelector('.father')
       let son = document.querySelector('.son')
       document.addEventListener(
@@ -42,9 +42,6 @@
         },
         true
       )
-      // fa.addEventListener('dblclick', function () {
-      //   console.log('father!!!')
-      // })
       son.addEventListener(
         'click',
         function () {
@@ -52,8 +49,8 @@
         },
         true
       )
-      // setting all true is turning to the capturing from older to yunger element
-      // setting all false (defult) is turning to the capturing from younger to old element
+      // setting all true is turning to the capturing from older to younger element.
+      // setting all false (default) is turning to the capturing from younger to old element.
     </script>
   </body>
 </html>
